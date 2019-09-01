@@ -18,7 +18,7 @@ const db = knex({
 
 const bcrypt = require('bcrypt');
 
-const root = require('./controllers/root');
+// const root = require('./controllers/root');
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
