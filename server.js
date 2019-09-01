@@ -30,7 +30,7 @@ app.use(bodyParser.json());
 // enable all CORS requests
 app.use(cors());
 
-app.get('/', (req, res) => res.json("It is working!!!!!");
+app.get('/', (req, res) => res.json("It is working!!!!!"));
 
 // app.get('/', (req, res) => {
 // 	root.handleRoot(res, db);
