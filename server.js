@@ -55,6 +55,6 @@ app.post('/imageurl', (req, res) => {
 	image.handleApiCall(req, res);
 });
 
-app.listen(port, () => {
-	console.log(`Server is running at http://127.0.0.1:${port}`);
+app.listen(process.env.PORT || port, () => {
+	console.log(`Server is running at http://127.0.0.1:${process.env.PORT}`);
 });
