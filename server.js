@@ -30,9 +30,11 @@ app.use(bodyParser.json());
 // enable all CORS requests
 app.use(cors());
 
-app.get('/', (req, res) => {
-	root.handleRoot(res, db);
-});
+app.get('/', (req, res) => res.json("It is working!!!!!");
+
+// app.get('/', (req, res) => {
+// 	root.handleRoot(res, db);
+// });
 
 app.post('/register', (req, res) => {
 	register.handleRegister(req, res, db, bcrypt);
