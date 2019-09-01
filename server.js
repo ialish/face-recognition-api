@@ -18,7 +18,7 @@ const db = knex({
 
 const bcrypt = require('bcrypt');
 
-// const root = require('./controllers/root');
+const root = require('./controllers/root');
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
@@ -30,11 +30,9 @@ app.use(bodyParser.json());
 // enable all CORS requests
 app.use(cors());
 
-app.get('/', (req, res) => res.json("It is working!!!!!"));
-
-// app.get('/', (req, res) => {
-// 	root.handleRoot(res, db);
-// });
+app.get('/', (req, res) => {
+	root.handleRoot(res, db);
+});
 
 app.post('/register', (req, res) => {
 	register.handleRegister(req, res, db, bcrypt);
